@@ -1,4 +1,4 @@
-# ChangeBlindness
+# Change Blindness
 
 A Python/Psychopy script for a Change Blindness paradigm.
 
