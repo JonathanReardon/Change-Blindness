@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 from psychopy import visual, core, gui, event, sound
 from psychopy.data import getDateStr
@@ -7,12 +7,10 @@ import glob
 import csv
 
 # Set window and mouse
-
 win = visual.Window([800,600],color=(1,1,1), colorSpace='rgb', allowGUI=True, monitor='testMonitor', units='deg', fullscr=True)
 myMouse = event.Mouse(visible=True,win=win)
 
 # Practice Circles
-
 circles_on = 0
 
 prac_circle1 = visual.Circle(win, units='deg', radius=1, pos=(0.4,6.4),lineColor="red", opacity=circles_on)
@@ -20,7 +18,6 @@ prac_circle2 = visual.Circle(win, units='deg', radius=1, pos=(-7.6,-3.5),lineCol
 prac_circle3 = visual.Circle(win, units='deg', radius=1, pos=(9.2, -6.1),lineColor="blue", opacity=circles_on)
 
 # Image1 correct detection areas (to display ticks)
-
 circle1 = visual.Circle(win, units='deg', radius=1, pos=(-7.6,-4.1))
 circle2 = visual.Circle(win, units='deg', radius=1, pos=(6.2,-5.3), lineColor="yellow")
 circle3 = visual.Circle(win, units='deg', radius=1, pos=(3.9,1), lineColor="green")
@@ -28,7 +25,6 @@ circle4 = visual.Circle(win, units='deg', radius=1, pos=(.9,-5.3), lineColor="bl
 circle5 = visual.Circle(win, units='deg', radius=1, pos=(-10,-7), lineColor="black")
 
 # Image2 correct detection areas (to display ticks)
-
 circle6 = visual.Circle(win, units='deg', radius=1, pos=(0.6,6.1), lineColor="red")
 circle7 = visual.Circle(win, units='deg', radius=1, pos=(10.5,-7), lineColor="yellow")
 circle8 = visual.Circle(win, units='deg', radius=1, pos=(11.2,7.6), lineColor="orange")
@@ -36,7 +32,6 @@ circle9 = visual.Circle(win, units='deg', radius=1, pos=(-10,3.3), lineColor="bl
 circle10 = visual.Circle(win, units='deg', radius=1, pos=(-10,-7), lineColor="black")
 
 # Image3 correct detection areas (to display ticks)
-
 circle11 = visual.Circle(win, units='deg', radius=1, pos=(.3,-4.4), lineColor="red")
 circle12 = visual.Circle(win, units='deg', radius=1, pos=(-9.4,-3.1), lineColor="yellow")
 circle13 = visual.Circle(win, units='deg', radius=1, pos=(-11,7), lineColor="orange")
@@ -44,7 +39,6 @@ circle14 = visual.Circle(win, units='deg', radius=1, pos=(0,6), lineColor="blue"
 circle15 = visual.Circle(win, units='deg', radius=1, pos=(2,6), lineColor="black")
 
 # Image4 correct detection areas (to display ticks)
-
 circle16 = visual.Circle(win, units='deg', radius=1, pos=(9.5,-6.8), lineColor="red")
 circle17 = visual.Circle(win, units='deg', radius=1, pos=(-8.1,-5.3), lineColor="yellow")
 circle18 = visual.Circle(win, units='deg', radius=1, pos=(14,2), lineColor="orange")
@@ -52,15 +46,16 @@ circle19 = visual.Circle(win, units='deg', radius=1, pos=(-9.7,7.7), lineColor="
 circle20 = visual.Circle(win, units='deg', radius=1, pos=(9,6), lineColor="black")
 
 # Set clock and other variables
-
 clock = core.Clock()
 rt_clock = core.Clock()
 default_time=.5
 blank_time=.5
 shape_rad = 1
 refresh_rate = 60.0
+
 #learning_period = 3             # change to edit the learning time
 #detection_time = 3
+
 fix = 3
 blank = 2
 tick_size=1.5
@@ -1026,4 +1021,3 @@ while results_screen:
                 core.quit()
                 
         win.flip()
-
